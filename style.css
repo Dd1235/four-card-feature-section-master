@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-600: 600;
+
+    --clr-Red: hsl(0, 78%, 62%);
+    --clr-Cyan: hsl(180, 62%, 55%);
+    --clr-Orange: hsl(34, 97%, 64%);
+    --clr-Blue: hsl(212, 86%, 64%);
+
+    --clr-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --clr-Grayish-Blue: hsl(229, 6%, 66%);
+    --clr-Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    font-size: 15px;
+    font-weight: var(--fw-400);
+    color: var(--clr-Grayish-Blue);
+    line-height: 1.8;
+}
+h1,h2{
+    font-size: 28px;;
+}
+h1,h3{
+    color: var(--clr-Very-Dark-Blue);
+}
+.title p{
+    margin-top: 1rem;
+    text-align:center;
+}
+h2{
+    font-weight: var(--fw-200);
+    color: var(--clr-Very-Dark-Blue);
+}
+main{
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: center;
+    margin-bottom: 1rem;;
+}
+/* .cards{
+    /* display:;
+    flex-direction: column;
+    align-items: center; }*/
+
+
+article{
+   /* width: 300px; */
+   padding: 20px;
+   background-color: white;
+   box-shadow: 0 0 16px hsl(212, 86%, 64%,0.2);
+   border-top:0.5rem solid;
+   border-radius: 0.5rem;
+   margin-bottom: 1.25rem;
+    max-width: 400px;
+}
+article p{
+    margin-bottom: 3rem;
+}
+main  h3{
+    font-weight: var(--fw-600);
+    font-size: 1.25rem;
+}
+
+body{
+    background-color: var(--clr-Very-Light-Gray);
+}
+main .cards div:first-child article:first-child{
+    border-color: var(--clr-Cyan);
+    margin-top: 5rem;;
+}
+main .cards div:nth-child(2) article:first-child{
+    border-color: var(--clr-Red);
+}
+main .cards div:nth-child(2) article:nth-child(2){
+    border-color: var(--clr-Orange);
+}
+main .cards div:nth-child(3) article:first-child{
+    border-color: var(--clr-Blue);
+}
+
+main .cards article img{
+    display: block;
+    margin-left:auto;
+}
+
+@media(min-width:768px){
+  
+    .cards{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    .cards .two-row{
+        display: flex;
+        flex-direction: column;
+
+    }
+    main .cards div{
+        width: 30vw;
+    }
+    main .cards div:first-child{
+        transform: translateY(-10%);
+    }
+}
+   
