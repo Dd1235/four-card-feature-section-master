@@ -130,12 +130,7 @@ main .cards article img{
      .mid-bot{
         grid-area:mb;
      }
-     main{
-        padding:2rem 1.25rem;
-     }
-     .title{
-        margin-bottom:2rem;
-     }
+   
     
 }
    
