@@ -54,18 +54,14 @@ main{
 .title{
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 500px;
     align-items: center;
-    margin-bottom: 1rem;;
+    margin-bottom: 5rem;;
 }
-/* .cards{
-    /* display:;
-    flex-direction: column;
-    align-items: center; }*/
+
 
 
 article{
-   /* width: 300px; */
    padding: 20px;
    background-color: white;
    box-shadow: 0 0 16px hsl(212, 86%, 64%,0.2);
@@ -85,17 +81,18 @@ main  h3{
 body{
     background-color: var(--clr-Very-Light-Gray);
 }
-main .cards div:first-child article:first-child{
+
+
+main .cards article:first-child{
     border-color: var(--clr-Cyan);
-    margin-top: 5rem;;
 }
-main .cards div:nth-child(2) article:first-child{
+main .cards article:nth-child(2){
     border-color: var(--clr-Red);
 }
-main .cards div:nth-child(2) article:nth-child(2){
+main .cards  article:nth-child(3){
     border-color: var(--clr-Orange);
 }
-main .cards div:nth-child(3) article:first-child{
+main .cards  article:last-child{
     border-color: var(--clr-Blue);
 }
 
@@ -107,20 +104,38 @@ main .cards article img{
 @media(min-width:768px){
   
     .cards{
-        display: flex;
-        gap: 1rem;
-        align-items: center;
+        display:grid;
+        grid-template-columns: repeat(3,1fr) ;
+        grid-template-rows: repeat(2,1fr);
+        gap: 1.75rem;
+        row-gap: 0.5rem ;
+        grid-template-areas: 
+        "l mt r"
+        "l mb r";
     }
-    .cards .two-row{
-        display: flex;
-        flex-direction: column;
-
-    }
-    main .cards div{
-        width: 30vw;
-    }
-    main .cards div:first-child{
-        transform: translateY(-10%);
-    }
+    .left{
+        grid-area:l;
+        align-self: center; 
+        /* put a space around - else it doesn't work! */
+        height:calc(50% - 1.75rem)
+     }
+     .right{
+        grid-area:r;
+        align-self: center;  
+        height:calc(50% - 1.75rem)
+     }
+     .mid-top{
+        grid-area:mt;
+     }
+     .mid-bot{
+        grid-area:mb;
+     }
+     main{
+        padding:2rem 1.25rem;
+     }
+     .title{
+        margin-bottom:2rem;
+     }
+    
 }
    
